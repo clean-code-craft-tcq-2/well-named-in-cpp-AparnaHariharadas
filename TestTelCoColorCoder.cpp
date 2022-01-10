@@ -1,6 +1,4 @@
-//#include "TelCoColorCoder.h"
-extern enum MajorColor;
-extern enum MinorColor;
+#include "TelCoColorCoder.h"
 
 void testNumberToPair(int pairNumber,
     TelCoColorCoder::MajorColor expectedMajor,
