@@ -12,17 +12,17 @@ int TelCoColorCoder::GetPairNumberFromColor(TelCoColorCoder::MajorColor major, T
         return major * TelCoColorCoder::numberOfMinorColors + minor + 1;
     }
 
-int TelCoColorCoder::PrintColorCodeManual(){
+void TelCoColorCoder::PrintColorCodeManual(){
         int initial_index_major = 0;
-        int intial_index_minor = 0;
-        int colour_index= 0 ;
+        int initial_index_minor = 0;
+        int color_index= 0 ;
         for (major_colour = initial_index_major;major_color<TelCoColorCoder::numberOfMajorColors;major_color++){
-               for (minor_colour = initial_index_minor;major_color<TelCoColorCoder::numberOfMinorColors;minor_color++){
-                       cout<< TelCoColorCoder::MajorColor " + " TelCoColorCoder::MinorColor " = " colour_index<<endl;
+               for (minor_colour = initial_index_minor;minor_color<TelCoColorCoder::numberOfMinorColors;minor_color++){
+                       cout<< TelCoColorCoder::MajorColor " + " TelCoColorCoder::MinorColor " = " color_index<<endl;
                        color_index ++;
                }
         }
-
+}
 
 void testNumberToPair(int pairNumber,
     TelCoColorCoder::MajorColor expectedMajor,
