@@ -19,7 +19,7 @@ namespace TelCoColorCoder
         sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
 
     class ColorPair {
-        private:
+        public:
             MajorColor majorColor;
             MinorColor minorColor;
         public:
