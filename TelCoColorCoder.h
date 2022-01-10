@@ -40,5 +40,5 @@ namespace TelCoColorCoder
     };
     ColorPair GetColorFromPairNumber(int pairNumber);
     int GetPairNumberFromColor(MajorColor major, MinorColor minor);
-    void TelCoColorCoder::PrintColorCodeManual();
+    void PrintColorCodeManual();
 }
