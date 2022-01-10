@@ -46,7 +46,7 @@ void testPairToNumber(
 }
 void test_colorcodeManual()
 {
-    std::cout << "Colour 1 " << "colour 2" << "Value"<< std::endl;
+    std::cout << "Colour 1 " << "Colour 2 " << "Value"<< std::endl;
     TelCoColorCoder::PrintColorCodeManual();
 }
         
