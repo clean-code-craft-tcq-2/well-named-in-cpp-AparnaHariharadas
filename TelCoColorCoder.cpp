@@ -18,7 +18,7 @@ void TelCoColorCoder::PrintColorCodeManual(){
         int major_color,minor_color;
         for (major_color = initial_index_major;major_color<TelCoColorCoder::numberOfMajorColors;major_color++){
                for (minor_color = initial_index_minor;minor_color<TelCoColorCoder::numberOfMinorColors;minor_color++){
-                       std::cout << " Major_colour,  minor_colour, value" << TelCoColorCoder::MajorColor[initial_index_major] << TelCoColorCoder::MinorColor[initial_index_minor] << color_index << std::endl;
+                       std::cout << " Major_colour,  minor_colour, value" << TelCoColorCoder::MajorColorNames[initial_index_major] << TelCoColorCoder::MinorColorNames[initial_index_minor] << color_index << std::endl;
                        color_index ++;
                }
         }
