@@ -1,4 +1,4 @@
-#include "FindColourPair.h"
+#include "TelCoColorCoder.h"
 
 TelCoColorCoder::ColorPair GetColorFromPairNumber(int pairNumber) {
         int zeroBasedPairNumber = pairNumber - 1;
@@ -13,7 +13,7 @@ int GetPairNumberFromColor(MajorColor major, MinorColor minor) {
     }
 
 
-/*void testNumberToPair(int pairNumber,
+void testNumberToPair(int pairNumber,
     TelCoColorCoder::MajorColor expectedMajor,
     TelCoColorCoder::MinorColor expectedMinor)
 {
@@ -42,6 +42,6 @@ int main() {
     testPairToNumber(TelCoColorCoder::VIOLET, TelCoColorCoder::SLATE, 25);
 
     return 0;
-}*/
+}
 
 
