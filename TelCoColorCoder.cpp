@@ -6,7 +6,7 @@ TelCoColorCoder::ColorPair GetColorFromPairNumber(int pairNumber) {
             (MajorColor)(zeroBasedPairNumber / numberOfMinorColors);
        MinorColor minorColor =
             (MinorColor)(zeroBasedPairNumber % numberOfMinorColors);
-        return TelCoColorCoder::ColorPair(majorColor, minorColor);
+        return ColorPair::ColorPair(majorColor, minorColor);
     }
 int GetPairNumberFromColor(MajorColor major, MinorColor minor) {
         return major * numberOfMinorColors + minor + 1;
