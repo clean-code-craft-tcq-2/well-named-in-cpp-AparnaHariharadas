@@ -1,4 +1,4 @@
-#include "TelCoColorCoder.h"
+//#include "TelCoColorCoder.h"
 
     TelCoColorCoder::ColorPair TelCoColorCoder::GetColorFromPairNumber(int pairNumber) {
         int zeroBasedPairNumber = pairNumber - 1;
