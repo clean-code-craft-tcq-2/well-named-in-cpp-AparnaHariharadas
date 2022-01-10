@@ -1,5 +1,3 @@
-#include <iostream>
-#include <assert.h>
 #include "TelCoColorCoder.h"
 
     TelCoColorCoder::ColorPair TelCoColorCoder::GetColorFromPairNumber(int pairNumber) {
