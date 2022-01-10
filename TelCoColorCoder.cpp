@@ -1,9 +1,9 @@
 #include "TelCoColorCoder.h"
 
-extern const char* MajorColourNames[];
-extern const char* MinorColourNames[];
-extern int numberOfMinorColors;
-extern int numberOfMajorColors;
+extern const char* TelCoColorCoder::MajorColourNames[];
+extern const char* TelCoColorCoder::MinorColourNames[];
+extern int TelCoColorCoder::numberOfMinorColors;
+extern int TelCoColorCoder::numberOfMajorColors;
 
 TelCoColorCoder::ColorPair TelCoColorCoder::GetColorFromPairNumber(int pairNumber) {
         int zeroBasedPairNumber = pairNumber - 1;
