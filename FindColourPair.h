@@ -12,7 +12,7 @@ const char* MajorColorNames[] = {
     int numberOfMinorColors =
         sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
 
-    TelCoColorCoder::class ColorPair {
+    class TelCoColorCoder::ColorPair {
         private:
             MajorColor majorColor;
             MinorColor minorColor;
