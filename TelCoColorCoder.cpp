@@ -1,15 +1,15 @@
 #include "FindColourPair.h"
 
-TelCoColorCoder::ColorPair TelCoColorCoder::GetColorFromPairNumber(int pairNumber) {
+ColorPair GetColorFromPairNumber(int pairNumber) {
         int zeroBasedPairNumber = pairNumber - 1;
         MajorColor majorColor = 
-            (MajorColor)(zeroBasedPairNumber / \numberOfMinorColors);
-        TelCoColorCoder::MinorColor minorColor =
-            (TelCoColorCoder::MinorColor)(zeroBasedPairNumber % TelCoColorCoder::numberOfMinorColors);
-        return TelCoColorCoder::ColorPair(majorColor, minorColor);
+            (MajorColor)(zeroBasedPairNumber / numberOfMinorColors);
+       MinorColor minorColor =
+            (MinorColor)(zeroBasedPairNumber % numberOfMinorColors);
+        return ColorPair(majorColor, minorColor);
     }
-int TelCoColorCoder::GetPairNumberFromColor(TelCoColorCoder::MajorColor major, TelCoColorCoder::MinorColor minor) {
-        return major * TelCoColorCoder::numberOfMinorColors + minor + 1;
+int GetPairNumberFromColor(:MajorColor major, MinorColor minor) {
+        return major * numberOfMinorColors + minor + 1;
     }
 
 
