@@ -4,7 +4,7 @@ using namespace std;
 
 namespace TelCoColorCoder
 {
-    enum MajorColor {WHITE, RED, BLACK, YELLOW, VIOLET};
+    /*enum MajorColor {WHITE, RED, BLACK, YELLOW, VIOLET};
     enum MinorColor {BLUE, ORANGE, GREEN, BROWN, SLATE};
 
     const char* MajorColorNames[] = {
@@ -16,10 +16,10 @@ namespace TelCoColorCoder
         "Blue", "Orange", "Green", "Brown", "Slate"
     };
     int numberOfMinorColors =
-        sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
+        sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);*/
 
     class ColorPair {
-        public:
+        private:
             MajorColor majorColor;
             MinorColor minorColor;
         public:
