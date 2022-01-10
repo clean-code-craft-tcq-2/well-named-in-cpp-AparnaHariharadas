@@ -2,8 +2,8 @@
 
 TelCoColorCoder::ColorPair TelCoColorCoder::GetColorFromPairNumber(int pairNumber) {
         int zeroBasedPairNumber = pairNumber - 1;
-        TelCoColorCoder::MajorColor majorColor = 
-            (TelCoColorCoder::MajorColor)(zeroBasedPairNumber / TelCoColorCoder::numberOfMinorColors);
+        MajorColor majorColor = 
+            (MajorColor)(zeroBasedPairNumber / \numberOfMinorColors);
         TelCoColorCoder::MinorColor minorColor =
             (TelCoColorCoder::MinorColor)(zeroBasedPairNumber % TelCoColorCoder::numberOfMinorColors);
         return TelCoColorCoder::ColorPair(majorColor, minorColor);
