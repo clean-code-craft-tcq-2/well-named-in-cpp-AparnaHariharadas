@@ -1,5 +1,10 @@
 #include "TelCoColorCoder.h"
 
+extern const char* MajorColourNames[];
+extern const char* MinorColourNames[];
+extern int numberOfMinorColors;
+extern int numberOfMajorColors;
+
 TelCoColorCoder::ColorPair TelCoColorCoder::GetColorFromPairNumber(int pairNumber) {
         int zeroBasedPairNumber = pairNumber - 1;
         TelCoColorCoder::MajorColor majorColor = 
@@ -13,7 +18,7 @@ int TelCoColorCoder::GetPairNumberFromColor(TelCoColorCoder::MajorColor major, T
     }
 
 
-void testNumberToPair(int pairNumber,
+/*void testNumberToPair(int pairNumber,
     TelCoColorCoder::MajorColor expectedMajor,
     TelCoColorCoder::MinorColor expectedMinor)
 {
@@ -42,6 +47,6 @@ int main() {
     testPairToNumber(TelCoColorCoder::VIOLET, TelCoColorCoder::SLATE, 25);
 
     return 0;
-}
+}*/
 
 
