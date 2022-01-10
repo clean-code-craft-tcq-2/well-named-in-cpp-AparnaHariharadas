@@ -15,11 +15,12 @@ int TelCoColorCoder::GetPairNumberFromColor(TelCoColorCoder::MajorColor major, T
 void TelCoColorCoder::PrintColorCodeManual(){
         int initial_index_major,initial_index_minor,color_index = 0;
         int major_color,minor_color;
-        std::cout << TelCoColorCoder::numberOfMajorColors << std::endl;
-                for (major_color = initial_index_major;major_color<TelCoColorCoder::numberOfMajorColors;major_color++){
-                        for (minor_color = initial_index_minor;minor_color<TelCoColorCoder::numberOfMinorColors;minor_color++){
+     
+                for (major_color = 0;major_color<TelCoColorCoder::numberOfMajorColors;major_color++){
+                        std::cout << TelCoColorCoder::numberOfMajorColors << std::endl;
+                        for (minor_color = 0;minor_color<TelCoColorCoder::numberOfMinorColors;minor_color++){
                        
-                       std::cout << TelCoColorCoder::MajorColorNames[initial_index_major] << TelCoColorCoder::MinorColorNames[initial_index_minor] << color_index << std::endl;
+                       std::cout << TelCoColorCoder::MajorColorNames[major_color] << TelCoColorCoder::MinorColorNames[minor_color] << color_index << std::endl;
                        color_index ++;
                }
         }
