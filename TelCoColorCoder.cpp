@@ -16,8 +16,8 @@ void TelCoColorCoder::PrintColorCodeManual(){
         int initial_index_major = 0;
         int initial_index_minor = 0;
         int color_index= 0 ;
-        for (major_colour = initial_index_major;major_color<TelCoColorCoder::numberOfMajorColors;major_color++){
-               for (minor_colour = initial_index_minor;minor_color<TelCoColorCoder::numberOfMinorColors;minor_color++){
+        for (major_color = initial_index_major;major_color<TelCoColorCoder::numberOfMajorColors;major_color++){
+               for (minor_color = initial_index_minor;minor_color<TelCoColorCoder::numberOfMinorColors;minor_color++){
                        cout<< TelCoColorCoder::MajorColor " + " TelCoColorCoder::MinorColor " = " color_index<<endl;
                        color_index ++;
                }
@@ -48,6 +48,7 @@ void test_colorcodeManual()
 {
     std::cout << "Colour 1 " << "colour 2" << "Value"<< std::endl;
     TelCoColorCoder::PrintColorCodeManual();
+}
         
 int main() {
     testNumberToPair(4, TelCoColorCoder::WHITE, TelCoColorCoder::BROWN);
