@@ -1,4 +1,3 @@
-#include "TelCoColorCoder.h"
 #include "FindColourPair.h"
 
 TelCoColorCoder::ColorPair TelCoColorCoder::GetColorFromPairNumber(int pairNumber) {
