@@ -1,7 +1,7 @@
 #include "TelCoColorCoder.h"
 
-extern const char* TelCoColorCoder::MajorColourNames;
-extern const char* TelCoColorCoder::MinorColourNames;
+extern const char* MajorColourNames[];
+extern const char* MinorColourNames[];
 extern int TelCoColorCoder::numberOfMinorColors;
 extern int TelCoColorCoder::numberOfMajorColors;
 
