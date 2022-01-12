@@ -15,9 +15,8 @@ int TelCoColorCoder::GetPairNumberFromColor(TelCoColorCoder::MajorColor major, T
 void TelCoColorCoder::PrintColorCodeManual(){
         int color_index = 1;
         int major_color,minor_color;
-     
-                for (major_color = 0;major_color<TelCoColorCoder::numberOfMajorColors;major_color++){
-                        for (minor_color = 0;minor_color<TelCoColorCoder::numberOfMinorColors;minor_color++){                       
+        for (major_color = 0;major_color<TelCoColorCoder::numberOfMajorColors;major_color++){
+                for (minor_color = 0;minor_color<TelCoColorCoder::numberOfMinorColors;minor_color++){                       
                        std::cout << TelCoColorCoder::MajorColorNames[major_color] <<" " << TelCoColorCoder::MinorColorNames[minor_color] << " " << color_index << std::endl;
                        color_index ++;
                }
@@ -44,8 +43,7 @@ void testPairToNumber(
     std::cout << "Got pair number " << pairNumber << std::endl;
     assert(pairNumber == expectedPairNumber);
 }
-void test_colorcodeManual()
-{
+void test_colorcodeManual(){
     std::cout << "Colour 1 " << "Colour 2 " << "Value"<< std::endl;
     TelCoColorCoder::PrintColorCodeManual();
 }
@@ -57,7 +55,6 @@ int main() {
     testPairToNumber(TelCoColorCoder::BLACK, TelCoColorCoder::ORANGE, 12);
     testPairToNumber(TelCoColorCoder::VIOLET, TelCoColorCoder::SLATE, 25);
     test_colorcodeManual();
-
     return 0;
 }
 
