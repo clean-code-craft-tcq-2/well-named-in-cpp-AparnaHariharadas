@@ -40,7 +40,7 @@ namespace TelCoColorCoder
                 return colorPairStr;
             }
     };
-    /*ColorPair GetColorFromPairNumber(int pairNumber);
+    ColorPair GetColorFromPairNumber(int pairNumber);
     int GetPairNumberFromColor(MajorColor major, MinorColor minor);
-    void PrintColorCodeManual();*/
+    void PrintColorCodeManual();
 }
