@@ -8,12 +8,12 @@ namespace TelCoColorCoder
 {
     enum MajorColor {WHITE, RED, BLACK, YELLOW, VIOLET};
     enum MinorColor {BLUE, ORANGE, GREEN, BROWN, SLATE};
-    const char* MajorColorNames[] = {
+    const char* MajorColorNames1[] = {
         "White", "Red", "Black", "Yellow", "Violet"
     };
     /*int numberOfMajorColors =
         sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);*/
-    const char* MinorColorNames[] = {
+    const char* MinorColorNames1[] = {
         "Blue", "Orange", "Green", "Brown", "Slate"
     };
     /*int numberOfMinorColors =
@@ -34,9 +34,9 @@ namespace TelCoColorCoder
                 return minorColor;
             }
             std::string ToString() {
-                std::string colorPairStr = MajorColorNames[majorColor];
+                std::string colorPairStr = MajorColorNames1[majorColor];
                 colorPairStr += " ";
-                colorPairStr += MinorColorNames[minorColor];
+                colorPairStr += MinorColorNames1[minorColor];
                 return colorPairStr;
             }
     };
