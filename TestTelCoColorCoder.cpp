@@ -1,5 +1,5 @@
 #include "TestTelCoColorCoder.h"
-
+#include "TelCoColorCoder.cpp"
 void testNumberToPair(int pairNumber, TelCoColorCoder::MajorColor expectedMajor, TelCoColorCoder::MinorColor expectedMinor){
     TelCoColorCoder::ColorPair colorPair =
         GetColorFromPairNumber(pairNumber);
