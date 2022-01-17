@@ -1,15 +1,10 @@
 #include "TelCoColorCoder.h"
 
-const char* MajorColorNames[] = {
-        "White", "Red", "Black", "Yellow", "Violet"
-    };
+
     int numberOfMajorColors =
-        sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);
-    const char* MinorColorNames[] = {
-        "Blue", "Orange", "Green", "Brown", "Slate"
-    };
+        sizeof(TelCoColorCoder::MajorColorNames) / sizeof(TelCoColorCoder::MajorColorNames[0]);
     int numberOfMinorColors =
-        sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
+        sizeof(TelCoColorCoder::MinorColorNames) / sizeof(TelCoColorCoder::MinorColorNames[0]);
 
 TelCoColorCoder::ColorPair TelCoColorCoder::GetColorFromPairNumber(int pairNumber) {
         int zeroBasedPairNumber = pairNumber - 1;
@@ -26,7 +21,7 @@ void TelCoColorCoder::PrintColorCodeManual(){
         int major_color,minor_color;
         for (major_color = 0;major_color<numberOfMajorColors;major_color++){
                 for (minor_color = 0;minor_color<numberOfMinorColors;minor_color++){                       
-                       std::cout << MajorColorNames[major_color] <<" " << MinorColorNames[minor_color] << " " << color_index << std::endl;
+                       std::cout << TelCoColorCoder::MajorColorNames[major_color] <<" " << TelCoColorCoder::MinorColorNames[minor_color] << " " << color_index << std::endl;
                        color_index ++;
                }
         }
