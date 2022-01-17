@@ -1,16 +1,16 @@
 #include "TelCoColorCoder.h"
 
-TelCoColorCoder::ColorPair TelCoColorCoder::GetColorFromPairNumber(int pairNumber) {
+TelCoColorCoder::ColorPair GetColorFromPairNumber(int pairNumber) {
         int zeroBasedPairNumber = pairNumber - 1;
         TelCoColorCoder::MajorColor majorColor = (TelCoColorCoder::MajorColor)(zeroBasedPairNumber / TelCoColorCoder::numberOfMinorColors);
        TelCoColorCoder::MinorColor minorColor = (TelCoColorCoder::MinorColor)(zeroBasedPairNumber % TelCoColorCoder::numberOfMinorColors);
         return TelCoColorCoder::ColorPair(majorColor, minorColor);
     }
-int TelCoColorCoder::GetPairNumberFromColor(TelCoColorCoder::MajorColor major, TelCoColorCoder::MinorColor minor) {
+int GetPairNumberFromColor(TelCoColorCoder::MajorColor major, TelCoColorCoder::MinorColor minor) {
         return major * TelCoColorCoder::numberOfMinorColors + minor + 1;
     }
 
-void TelCoColorCoder::PrintColorCodeManual(){
+void PrintColorCodeManual(){
         int color_index = 1;
         int major_color,minor_color;
         for (major_color = 0;major_color<TelCoColorCoder::numberOfMajorColors;major_color++){
