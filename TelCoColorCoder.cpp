@@ -1,14 +1,15 @@
 #include "TelCoColorCoder.h"
 
-    const char* TelCoColorCoder::MajorColorNames[] = {
+const char* TelCoColorCoder::MajorColorNames[] = {
         "White", "Red", "Black", "Yellow", "Violet"
     };
-    int numberOfMajorColors =
+int numberOfMajorColors =
         sizeof(TelCoColorCoder::MajorColorNames) / sizeof(TelCoColorCoder::MajorColorNames[0]);
-    const char* TelCoColorCoder::MinorColorNames[] = {
+const char* TelCoColorCoder::MinorColorNames[] = {
         "Blue", "Orange", "Green", "Brown", "Slate"
     };
-    int numberOfMinorColors =
+
+int numberOfMinorColors =
         sizeof(TelCoColorCoder::MinorColorNames) / sizeof(TelCoColorCoder::MinorColorNames[0]);
 
 TelCoColorCoder::ColorPair TelCoColorCoder::GetColorFromPairNumber(int pairNumber) {
@@ -17,6 +18,7 @@ TelCoColorCoder::ColorPair TelCoColorCoder::GetColorFromPairNumber(int pairNumbe
        TelCoColorCoder::MinorColor minorColor = (TelCoColorCoder::MinorColor)(zeroBasedPairNumber % numberOfMinorColors);
         return TelCoColorCoder::ColorPair(majorColor, minorColor);
     }
+
 int TelCoColorCoder::GetPairNumberFromColor(TelCoColorCoder::MajorColor major, TelCoColorCoder::MinorColor minor) {
         return major * numberOfMinorColors + minor + 1;
     }
@@ -31,33 +33,4 @@ void TelCoColorCoder::PrintColorCodeManual(){
                }
         }
 }
-
-/*void testNumberToPair(int pairNumber, TelCoColorCoder::MajorColor expectedMajor, TelCoColorCoder::MinorColor expectedMinor){
-    TelCoColorCoder::ColorPair colorPair =
-        TelCoColorCoder::GetColorFromPairNumber(pairNumber);
-    std::cout << "Got pair " << colorPair.ToString() << std::endl;
-    assert(colorPair.getMajor() == expectedMajor);
-    assert(colorPair.getMinor() == expectedMinor);
-}
-
-void testPairToNumber(TelCoColorCoder::MajorColor major, TelCoColorCoder::MinorColor minor, int expectedPairNumber){
-    int pairNumber = TelCoColorCoder::GetPairNumberFromColor(major, minor);
-    std::cout << "Got pair number " << pairNumber << std::endl;
-    assert(pairNumber == expectedPairNumber);
-}
-void test_colorcodeManual(){
-    std::cout << "Colour 1 " << "Colour 2 " << "Value"<< std::endl;
-    TelCoColorCoder::PrintColorCodeManual();
-}
-        
-int main() {
-    testNumberToPair(4, TelCoColorCoder::WHITE, TelCoColorCoder::BROWN);
-    testNumberToPair(5, TelCoColorCoder::WHITE, TelCoColorCoder::SLATE);
-
-    testPairToNumber(TelCoColorCoder::BLACK, TelCoColorCoder::ORANGE, 12);
-    testPairToNumber(TelCoColorCoder::VIOLET, TelCoColorCoder::SLATE, 25);
-    test_colorcodeManual();
-    return 0;
-}*/
-
 
