@@ -1,21 +1,32 @@
 #include "TelCoColorCoder.h"
 
+const char* MajorColorNames[] = {
+        "White", "Red", "Black", "Yellow", "Violet"
+    };
+    int numberOfMajorColors =
+        sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);
+    const char* MinorColorNames[] = {
+        "Blue", "Orange", "Green", "Brown", "Slate"
+    };
+    int numberOfMinorColors =
+        sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
+
 TelCoColorCoder::ColorPair TelCoColorCoder::GetColorFromPairNumber(int pairNumber) {
         int zeroBasedPairNumber = pairNumber - 1;
-        TelCoColorCoder::MajorColor majorColor = (TelCoColorCoder::MajorColor)(zeroBasedPairNumber / TelCoColorCoder::numberOfMinorColors);
-       TelCoColorCoder::MinorColor minorColor = (TelCoColorCoder::MinorColor)(zeroBasedPairNumber % TelCoColorCoder::numberOfMinorColors);
+        TelCoColorCoder::MajorColor majorColor = (TelCoColorCoder::MajorColor)(zeroBasedPairNumber / numberOfMinorColors);
+       TelCoColorCoder::MinorColor minorColor = (TelCoColorCoder::MinorColor)(zeroBasedPairNumber % numberOfMinorColors);
         return TelCoColorCoder::ColorPair(majorColor, minorColor);
     }
 int TelCoColorCoder::GetPairNumberFromColor(TelCoColorCoder::MajorColor major, TelCoColorCoder::MinorColor minor) {
-        return major * TelCoColorCoder::numberOfMinorColors + minor + 1;
+        return major * numberOfMinorColors + minor + 1;
     }
 
 void TelCoColorCoder::PrintColorCodeManual(){
         int color_index = 1;
         int major_color,minor_color;
-        for (major_color = 0;major_color<TelCoColorCoder::numberOfMajorColors;major_color++){
-                for (minor_color = 0;minor_color<TelCoColorCoder::numberOfMinorColors;minor_color++){                       
-                       std::cout << TelCoColorCoder::MajorColorNames[major_color] <<" " << TelCoColorCoder::MinorColorNames[minor_color] << " " << color_index << std::endl;
+        for (major_color = 0;major_color<numberOfMajorColors;major_color++){
+                for (minor_color = 0;minor_color<numberOfMinorColors;minor_color++){                       
+                       std::cout << MajorColorNames[major_color] <<" " << MinorColorNames[minor_color] << " " << color_index << std::endl;
                        color_index ++;
                }
         }
