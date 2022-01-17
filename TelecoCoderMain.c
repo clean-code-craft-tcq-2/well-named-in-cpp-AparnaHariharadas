@@ -1,6 +1,6 @@
-#include "TestTelCoColorCoder.h"
+//#include "TestTelCoColorCoder.h"
 
-int main() {
+/*int main() {
     testNumberToPair(4, TelCoColorCoder::WHITE, TelCoColorCoder::BROWN);
     testNumberToPair(5, TelCoColorCoder::WHITE, TelCoColorCoder::SLATE);
 
@@ -8,4 +8,4 @@ int main() {
     testPairToNumber(TelCoColorCoder::VIOLET, TelCoColorCoder::SLATE, 25);
     test_colorcodeManual();
     return 0;
-}
+}*/
