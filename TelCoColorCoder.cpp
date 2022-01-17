@@ -21,7 +21,7 @@ void TelCoColorCoder::PrintColorCodeManual(){
         }
 }
 
-void testNumberToPair(int pairNumber, TelCoColorCoder::MajorColor expectedMajor, TelCoColorCoder::MinorColor expectedMinor){
+/*void testNumberToPair(int pairNumber, TelCoColorCoder::MajorColor expectedMajor, TelCoColorCoder::MinorColor expectedMinor){
     TelCoColorCoder::ColorPair colorPair =
         TelCoColorCoder::GetColorFromPairNumber(pairNumber);
     std::cout << "Got pair " << colorPair.ToString() << std::endl;
@@ -47,6 +47,6 @@ int main() {
     testPairToNumber(TelCoColorCoder::VIOLET, TelCoColorCoder::SLATE, 25);
     test_colorcodeManual();
     return 0;
-}
+}*/
 
 
